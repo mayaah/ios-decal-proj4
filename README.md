@@ -1,19 +1,19 @@
-## A Sea of Quotes
+# A Sea of Quotes
 
-# Authors
+## Authors
 * Maya Hernandez
 
-# Purpose
+## Purpose
 
-# Features
+## Features
 
-# Control Flow
+## Control Flow
 
-# Implementation
+## Implementation
 
-# Model
+### Model
 
-# View
+### View
 
-# Controller
+### Controller
 
