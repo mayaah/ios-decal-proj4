@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FA11CCD9F76005E771F /* AppDelegate.swift */; };
+		626D6FA41CCD9F76005E771F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FA31CCD9F76005E771F /* ViewController.swift */; };
+		626D6FA71CCD9F76005E771F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D6FA51CCD9F76005E771F /* Main.storyboard */; };
+		626D6FA91CCD9F76005E771F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626D6FA81CCD9F76005E771F /* Assets.xcassets */; };
+		626D6FAC1CCD9F76005E771F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D6FAA1CCD9F76005E771F /* LaunchScreen.storyboard */; };
+		626D6FB71CCD9F76005E771F /* A_Sea_of_QuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FB61CCD9F76005E771F /* A_Sea_of_QuotesTests.swift */; };
+		626D6FC21CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FC11CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift */; };
+		626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		626D6FB31CCD9F76005E771F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626D6F961CCD9F76005E771F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 626D6F9D1CCD9F76005E771F;
+			remoteInfo = "A Sea of Quotes";
+		};
+		626D6FBE1CCD9F76005E771F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626D6F961CCD9F76005E771F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 626D6F9D1CCD9F76005E771F;
+			remoteInfo = "A Sea of Quotes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		626D6F9E1CCD9F76005E771F /* A Sea of Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Sea of Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		626D6FA11CCD9F76005E771F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		626D6FA31CCD9F76005E771F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		626D6FA61CCD9F76005E771F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		626D6FA81CCD9F76005E771F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		626D6FAB1CCD9F76005E771F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		626D6FAD1CCD9F76005E771F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626D6FB21CCD9F76005E771F /* A Sea of QuotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Sea of QuotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		626D6FB61CCD9F76005E771F /* A_Sea_of_QuotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Sea_of_QuotesTests.swift; sourceTree = "<group>"; };
+		626D6FB81CCD9F76005E771F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626D6FBD1CCD9F76005E771F /* A Sea of QuotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Sea of QuotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		626D6FC11CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Sea_of_QuotesUITests.swift; sourceTree = "<group>"; };
+		626D6FC31CCD9F76005E771F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TumblrAPI.swift; path = ../TumblrAPI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		626D6F9B1CCD9F76005E771F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6FAF1CCD9F76005E771F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6FBA1CCD9F76005E771F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		626D6F951CCD9F76005E771F = {
+			isa = PBXGroup;
+			children = (
+				626D6FA01CCD9F76005E771F /* A Sea of Quotes */,
+				626D6FB51CCD9F76005E771F /* A Sea of QuotesTests */,
+				626D6FC01CCD9F76005E771F /* A Sea of QuotesUITests */,
+				626D6F9F1CCD9F76005E771F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		626D6F9F1CCD9F76005E771F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				626D6F9E1CCD9F76005E771F /* A Sea of Quotes.app */,
+				626D6FB21CCD9F76005E771F /* A Sea of QuotesTests.xctest */,
+				626D6FBD1CCD9F76005E771F /* A Sea of QuotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		626D6FA01CCD9F76005E771F /* A Sea of Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				626D6FD11CCDA164005E771F /* TumblrAPI */,
+				626D6FA11CCD9F76005E771F /* AppDelegate.swift */,
+				626D6FA31CCD9F76005E771F /* ViewController.swift */,
+				626D6FA51CCD9F76005E771F /* Main.storyboard */,
+				626D6FA81CCD9F76005E771F /* Assets.xcassets */,
+				626D6FAA1CCD9F76005E771F /* LaunchScreen.storyboard */,
+				626D6FAD1CCD9F76005E771F /* Info.plist */,
+			);
+			path = "A Sea of Quotes";
+			sourceTree = "<group>";
+		};
+		626D6FB51CCD9F76005E771F /* A Sea of QuotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				626D6FB61CCD9F76005E771F /* A_Sea_of_QuotesTests.swift */,
+				626D6FB81CCD9F76005E771F /* Info.plist */,
+			);
+			path = "A Sea of QuotesTests";
+			sourceTree = "<group>";
+		};
+		626D6FC01CCD9F76005E771F /* A Sea of QuotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				626D6FC11CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift */,
+				626D6FC31CCD9F76005E771F /* Info.plist */,
+			);
+			path = "A Sea of QuotesUITests";
+			sourceTree = "<group>";
+		};
+		626D6FD11CCDA164005E771F /* TumblrAPI */ = {
+			isa = PBXGroup;
+			children = (
+				626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */,
+			);
+			name = TumblrAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		626D6F9D1CCD9F76005E771F /* A Sea of Quotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626D6FC61CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of Quotes" */;
+			buildPhases = (
+				626D6F9A1CCD9F76005E771F /* Sources */,
+				626D6F9B1CCD9F76005E771F /* Frameworks */,
+				626D6F9C1CCD9F76005E771F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "A Sea of Quotes";
+			productName = "A Sea of Quotes";
+			productReference = 626D6F9E1CCD9F76005E771F /* A Sea of Quotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		626D6FB11CCD9F76005E771F /* A Sea of QuotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626D6FC91CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of QuotesTests" */;
+			buildPhases = (
+				626D6FAE1CCD9F76005E771F /* Sources */,
+				626D6FAF1CCD9F76005E771F /* Frameworks */,
+				626D6FB01CCD9F76005E771F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				626D6FB41CCD9F76005E771F /* PBXTargetDependency */,
+			);
+			name = "A Sea of QuotesTests";
+			productName = "A Sea of QuotesTests";
+			productReference = 626D6FB21CCD9F76005E771F /* A Sea of QuotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		626D6FBC1CCD9F76005E771F /* A Sea of QuotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626D6FCC1CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of QuotesUITests" */;
+			buildPhases = (
+				626D6FB91CCD9F76005E771F /* Sources */,
+				626D6FBA1CCD9F76005E771F /* Frameworks */,
+				626D6FBB1CCD9F76005E771F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				626D6FBF1CCD9F76005E771F /* PBXTargetDependency */,
+			);
+			name = "A Sea of QuotesUITests";
+			productName = "A Sea of QuotesUITests";
+			productReference = 626D6FBD1CCD9F76005E771F /* A Sea of QuotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		626D6F961CCD9F76005E771F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = mayaah;
+				TargetAttributes = {
+					626D6F9D1CCD9F76005E771F = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2QY32CDSYE;
+					};
+					626D6FB11CCD9F76005E771F = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2QY32CDSYE;
+						TestTargetID = 626D6F9D1CCD9F76005E771F;
+					};
+					626D6FBC1CCD9F76005E771F = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2QY32CDSYE;
+						TestTargetID = 626D6F9D1CCD9F76005E771F;
+					};
+				};
+			};
+			buildConfigurationList = 626D6F991CCD9F76005E771F /* Build configuration list for PBXProject "A Sea of Quotes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 626D6F951CCD9F76005E771F;
+			productRefGroup = 626D6F9F1CCD9F76005E771F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				626D6F9D1CCD9F76005E771F /* A Sea of Quotes */,
+				626D6FB11CCD9F76005E771F /* A Sea of QuotesTests */,
+				626D6FBC1CCD9F76005E771F /* A Sea of QuotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		626D6F9C1CCD9F76005E771F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626D6FAC1CCD9F76005E771F /* LaunchScreen.storyboard in Resources */,
+				626D6FA91CCD9F76005E771F /* Assets.xcassets in Resources */,
+				626D6FA71CCD9F76005E771F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6FB01CCD9F76005E771F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6FBB1CCD9F76005E771F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		626D6F9A1CCD9F76005E771F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626D6FA41CCD9F76005E771F /* ViewController.swift in Sources */,
+				626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */,
+				626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6FAE1CCD9F76005E771F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626D6FB71CCD9F76005E771F /* A_Sea_of_QuotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626D6FB91CCD9F76005E771F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626D6FC21CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		626D6FB41CCD9F76005E771F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 626D6F9D1CCD9F76005E771F /* A Sea of Quotes */;
+			targetProxy = 626D6FB31CCD9F76005E771F /* PBXContainerItemProxy */;
+		};
+		626D6FBF1CCD9F76005E771F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 626D6F9D1CCD9F76005E771F /* A Sea of Quotes */;
+			targetProxy = 626D6FBE1CCD9F76005E771F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		626D6FA51CCD9F76005E771F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				626D6FA61CCD9F76005E771F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		626D6FAA1CCD9F76005E771F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				626D6FAB1CCD9F76005E771F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		626D6FC41CCD9F76005E771F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		626D6FC51CCD9F76005E771F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		626D6FC71CCD9F76005E771F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "A Sea of Quotes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mayaah.A-Sea-of-Quotes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		626D6FC81CCD9F76005E771F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "A Sea of Quotes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mayaah.A-Sea-of-Quotes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		626D6FCA1CCD9F76005E771F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "A Sea of QuotesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mayaah.A-Sea-of-QuotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/A Sea of Quotes.app/A Sea of Quotes";
+			};
+			name = Debug;
+		};
+		626D6FCB1CCD9F76005E771F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "A Sea of QuotesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mayaah.A-Sea-of-QuotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/A Sea of Quotes.app/A Sea of Quotes";
+			};
+			name = Release;
+		};
+		626D6FCD1CCD9F76005E771F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "A Sea of QuotesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mayaah.A-Sea-of-QuotesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "A Sea of Quotes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		626D6FCE1CCD9F76005E771F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "A Sea of QuotesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mayaah.A-Sea-of-QuotesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "A Sea of Quotes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		626D6F991CCD9F76005E771F /* Build configuration list for PBXProject "A Sea of Quotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626D6FC41CCD9F76005E771F /* Debug */,
+				626D6FC51CCD9F76005E771F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		626D6FC61CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of Quotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626D6FC71CCD9F76005E771F /* Debug */,
+				626D6FC81CCD9F76005E771F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		626D6FC91CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of QuotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626D6FCA1CCD9F76005E771F /* Debug */,
+				626D6FCB1CCD9F76005E771F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		626D6FCC1CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of QuotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626D6FCD1CCD9F76005E771F /* Debug */,
+				626D6FCE1CCD9F76005E771F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 626D6F961CCD9F76005E771F /* Project object */;
+}
