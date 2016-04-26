@@ -15,6 +15,7 @@
 		626D6FB71CCD9F76005E771F /* A_Sea_of_QuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FB61CCD9F76005E771F /* A_Sea_of_QuotesTests.swift */; };
 		626D6FC21CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FC11CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift */; };
 		626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */; };
+		626D6FD31CCDAD62005E771F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FD21CCDAD62005E771F /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		626D6FC11CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Sea_of_QuotesUITests.swift; sourceTree = "<group>"; };
 		626D6FC31CCD9F76005E771F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TumblrAPI.swift; path = ../TumblrAPI.swift; sourceTree = "<group>"; };
+		626D6FD21CCDAD62005E771F /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */,
+				626D6FD21CCDAD62005E771F /* Quote.swift */,
 			);
 			name = TumblrAPI;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626D6FD31CCDAD62005E771F /* Quote.swift in Sources */,
 				626D6FA41CCD9F76005E771F /* ViewController.swift in Sources */,
 				626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */,
 				626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */,
@@ -497,6 +501,7 @@
 				626D6FC81CCD9F76005E771F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		626D6FC91CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of QuotesTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +510,7 @@
 				626D6FCB1CCD9F76005E771F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		626D6FCC1CCD9F76005E771F /* Build configuration list for PBXNativeTarget "A Sea of QuotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +519,7 @@
 				626D6FCE1CCD9F76005E771F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

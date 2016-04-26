@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let api = TumblrAPI()
+        api.loadQuotes(nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
