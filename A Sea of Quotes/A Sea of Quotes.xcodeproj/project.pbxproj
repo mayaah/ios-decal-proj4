@@ -16,6 +16,9 @@
 		626D6FC21CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FC11CCD9F76005E771F /* A_Sea_of_QuotesUITests.swift */; };
 		626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */; };
 		626D6FD31CCDAD62005E771F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FD21CCDAD62005E771F /* Quote.swift */; };
+		626D6FD61CCEB177005E771F /* QuotesTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FD51CCEB177005E771F /* QuotesTimelineViewController.swift */; };
+		626D6FD81CCEF63F005E771F /* TransitionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FD71CCEF63F005E771F /* TransitionOperator.swift */; };
+		626D6FDB1CCEF895005E771F /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FDA1CCEF895005E771F /* TimelineCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		626D6FC31CCD9F76005E771F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626D6FCF1CCDA14A005E771F /* TumblrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TumblrAPI.swift; path = ../TumblrAPI.swift; sourceTree = "<group>"; };
 		626D6FD21CCDAD62005E771F /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		626D6FD51CCEB177005E771F /* QuotesTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTimelineViewController.swift; sourceTree = "<group>"; };
+		626D6FD71CCEF63F005E771F /* TransitionOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionOperator.swift; sourceTree = "<group>"; };
+		626D6FDA1CCEF895005E771F /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		626D6FA01CCD9F76005E771F /* A Sea of Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				626D6FD91CCEF88C005E771F /* Cells */,
+				626D6FD41CCEB14B005E771F /* Views */,
 				626D6FD11CCDA164005E771F /* TumblrAPI */,
 				626D6FA11CCD9F76005E771F /* AppDelegate.swift */,
 				626D6FA31CCD9F76005E771F /* ViewController.swift */,
@@ -137,6 +145,23 @@
 				626D6FD21CCDAD62005E771F /* Quote.swift */,
 			);
 			name = TumblrAPI;
+			sourceTree = "<group>";
+		};
+		626D6FD41CCEB14B005E771F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				626D6FD51CCEB177005E771F /* QuotesTimelineViewController.swift */,
+				626D6FD71CCEF63F005E771F /* TransitionOperator.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		626D6FD91CCEF88C005E771F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				626D6FDA1CCEF895005E771F /* TimelineCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626D6FD81CCEF63F005E771F /* TransitionOperator.swift in Sources */,
+				626D6FDB1CCEF895005E771F /* TimelineCell.swift in Sources */,
 				626D6FD31CCDAD62005E771F /* Quote.swift in Sources */,
 				626D6FA41CCD9F76005E771F /* ViewController.swift in Sources */,
 				626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */,
 				626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */,
+				626D6FD61CCEB177005E771F /* QuotesTimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

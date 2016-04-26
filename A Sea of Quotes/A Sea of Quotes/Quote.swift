@@ -14,6 +14,8 @@ class Quote {
     var postURL : String!
     var photoURL : String!
     
+    var photoData : NSData?
+    
     init(data : NSDictionary) {
         
         let desc = getStringFromJSON(data, key: "summary")
@@ -22,8 +24,8 @@ class Quote {
         let post = getStringFromJSON(data, key: "post_url")
         self.postURL = post
         
-        let photos = data["photos"] as! NSDictionary
-        let origSize = photos["original_size"] as! NSDictionary
+        let photos = data["photos"] as! NSArray
+        let origSize = photos[0]["original_size"] as! NSDictionary
         self.photoURL = getStringFromJSON(origSize, key: "url")
     }
     

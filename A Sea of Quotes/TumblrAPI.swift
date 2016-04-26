@@ -12,9 +12,9 @@ class TumblrAPI {
     
     let APIKey = "MOz3EosqbGjOZHQFVmSSGwBYGicVvhiJ27Fp7Nha0Rnmf1DDbd"
     
-    func loadQuotes(completion: ((AnyObject) -> Void)!) {
+    func loadQuotes(completion: (([Quote]) -> Void)!) {
         
-        var URLString = "api.tumblr.com/v2/blog/aseaofquotes.tumblr.com/posts/photos?api_key=" + APIKey
+        var URLString = "https://api.tumblr.com/v2/blog/aseaofquotes.tumblr.com/posts/photo?api_key=" + APIKey
         
         let session = NSURLSession.sharedSession()
         let quotesURL = NSURL(string: URLString)
@@ -32,12 +32,17 @@ class TumblrAPI {
                 
                 do {
                 
-                    let quotesData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as! NSArray
+                    let quotesData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as! NSDictionary
                 
-                
-                    for quote in quotesData {
-                        let quote = Quote(data: quote as! NSDictionary)
+                    
+                    var responseDictionary: NSDictionary!
+                    responseDictionary = quotesData["response"] as! NSDictionary
+                    var postsDictionary: [NSDictionary]!
+                    postsDictionary = responseDictionary["posts"] as! [NSDictionary]
+                    for quote in postsDictionary {
+                        let quote = Quote(data: quote as NSDictionary)
                         quotes.append(quote)
+                    
                     }
                     
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
