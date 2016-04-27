@@ -64,6 +64,8 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
+    
+
     func asyncLoadQuoteImage(quote: Quote, imageView: UIImageView) {
         
         let downloadQueue = dispatch_queue_create("com.aseaofquotes.processdownload", nil)
@@ -80,7 +82,6 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
             
             dispatch_async(dispatch_get_main_queue()) {
                 imageView.image = image
-                imageView.frame.width == 100
             }
             
         }
