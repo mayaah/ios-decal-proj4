@@ -49,6 +49,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
     }
     
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCellPhoto") as! TimelineCell
@@ -79,6 +80,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
             
             dispatch_async(dispatch_get_main_queue()) {
                 imageView.image = image
+                imageView.frame.width == 100
             }
             
         }
