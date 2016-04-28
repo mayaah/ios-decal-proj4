@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let api = TumblrAPI()
-        api.loadQuotes(nil)
+        api.loadQuotes(nil, offset: 0)
         
     }
 

@@ -19,6 +19,10 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
     
     var quotes : [Quote]!
     
+    var offset: Int = 0
+    
+    let api = TumblrAPI()
+    
     
     var transitionOperator = TransitionOperator()
     
@@ -35,8 +39,8 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         toolbar.tintColor = UIColor.blackColor()
         
         quotes = [Quote]()
-        let api = TumblrAPI()
-        api.loadQuotes(didLoadQuotes)
+        
+        api.loadQuotes(didLoadQuotes, offset: offset)
         
     }
     
@@ -64,6 +68,15 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         cell.bookmarkImageView?.image = UIImage(named: "Bookmark")
         return cell
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row+1 == quotes.count {
+            offset += 20
+            api.loadQuotes(didLoadQuotes, offset: offset)
+        }
+    }
+    
+    
     
     @IBAction func presentNavigation(sender: AnyObject?){
         

@@ -12,9 +12,11 @@ class TumblrAPI {
     
     let APIKey = "MOz3EosqbGjOZHQFVmSSGwBYGicVvhiJ27Fp7Nha0Rnmf1DDbd"
     
-    func loadQuotes(completion: (([Quote]) -> Void)!) {
+    var quotes = [Quote]()
+    
+    func loadQuotes(completion: (([Quote]) -> Void)!, offset: NSInteger) {
         
-        var URLString = "https://api.tumblr.com/v2/blog/aseaofquotes.tumblr.com/posts/photo?api_key=" + APIKey
+        var URLString = "https://api.tumblr.com/v2/blog/aseaofquotes.tumblr.com/posts/photo?api_key=" + APIKey + "&offset=" + String(offset)
         
         let session = NSURLSession.sharedSession()
         let quotesURL = NSURL(string: URLString)
@@ -28,7 +30,7 @@ class TumblrAPI {
                 
                 var error: NSError?
                 
-                var quotes = [Quote]()
+                
                 
                 do {
                 
@@ -41,14 +43,14 @@ class TumblrAPI {
                     postsDictionary = responseDictionary["posts"] as! [NSDictionary]
                     for quote in postsDictionary {
                         let quote = Quote(data: quote as NSDictionary)
-                        quotes.append(quote)
+                        self.quotes.append(quote)
                     
                     }
                     
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
                     dispatch_async(dispatch_get_global_queue(priority, 0)) {
                         dispatch_async(dispatch_get_main_queue()) {
-                            completion(quotes)
+                            completion(self.quotes)
                         }
                     }
                 } catch let error as NSError {
