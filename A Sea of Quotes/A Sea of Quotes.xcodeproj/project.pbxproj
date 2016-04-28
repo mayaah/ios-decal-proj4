@@ -19,6 +19,8 @@
 		626D6FD61CCEB177005E771F /* QuotesTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FD51CCEB177005E771F /* QuotesTimelineViewController.swift */; };
 		626D6FD81CCEF63F005E771F /* TransitionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FD71CCEF63F005E771F /* TransitionOperator.swift */; };
 		626D6FDB1CCEF895005E771F /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FDA1CCEF895005E771F /* TimelineCell.swift */; };
+		626D6FDF1CD1D61A005E771F /* NavigationSideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FDE1CD1D61A005E771F /* NavigationSideController.swift */; };
+		626D6FE11CD1D675005E771F /* NavigationSideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6FE01CD1D675005E771F /* NavigationSideCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		626D6FD51CCEB177005E771F /* QuotesTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTimelineViewController.swift; sourceTree = "<group>"; };
 		626D6FD71CCEF63F005E771F /* TransitionOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionOperator.swift; sourceTree = "<group>"; };
 		626D6FDA1CCEF895005E771F /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		626D6FDE1CD1D61A005E771F /* NavigationSideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSideController.swift; sourceTree = "<group>"; };
+		626D6FE01CD1D675005E771F /* NavigationSideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSideCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 			children = (
 				626D6FD51CCEB177005E771F /* QuotesTimelineViewController.swift */,
 				626D6FD71CCEF63F005E771F /* TransitionOperator.swift */,
+				626D6FDE1CD1D61A005E771F /* NavigationSideController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				626D6FDA1CCEF895005E771F /* TimelineCell.swift */,
+				626D6FE01CD1D675005E771F /* NavigationSideCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -300,9 +306,11 @@
 			files = (
 				626D6FD81CCEF63F005E771F /* TransitionOperator.swift in Sources */,
 				626D6FDB1CCEF895005E771F /* TimelineCell.swift in Sources */,
+				626D6FDF1CD1D61A005E771F /* NavigationSideController.swift in Sources */,
 				626D6FD31CCDAD62005E771F /* Quote.swift in Sources */,
 				626D6FA41CCD9F76005E771F /* ViewController.swift in Sources */,
 				626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */,
+				626D6FE11CD1D675005E771F /* NavigationSideCell.swift in Sources */,
 				626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */,
 				626D6FD61CCEB177005E771F /* QuotesTimelineViewController.swift in Sources */,
 			);

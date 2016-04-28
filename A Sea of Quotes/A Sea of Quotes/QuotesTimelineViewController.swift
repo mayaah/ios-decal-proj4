@@ -37,6 +37,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         quotes = [Quote]()
         let api = TumblrAPI()
         api.loadQuotes(didLoadQuotes)
+        
     }
     
     func didLoadQuotes(quotes: [Quote]) {
@@ -64,8 +65,22 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
+    @IBAction func presentNavigation(sender: AnyObject?){
+        
+        if self.nagivationStyleToPresent != nil {
+            transitionOperator.transitionStyle = nagivationStyleToPresent!
+            self.performSegueWithIdentifier(nagivationStyleToPresent!, sender: self)
+        }
+    }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let toViewController = segue.destinationViewController as UIViewController!
+        self.modalPresentationStyle = UIModalPresentationStyle.Custom
+        toViewController.transitioningDelegate = self.transitionOperator
+    }
+    
+    
     func asyncLoadQuoteImage(quote: Quote, imageView: UIImageView) {
         
         let downloadQueue = dispatch_queue_create("com.aseaofquotes.processdownload", nil)
