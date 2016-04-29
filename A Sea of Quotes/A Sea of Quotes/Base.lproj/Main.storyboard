@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6PN-EU-mAh">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6PN-EU-mAh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <barButtonItem image="Menu" id="JLf-iv-byT">
                                         <color key="tintColor" red="0.50588235294117645" green="0.70196078431372544" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,8 +32,14 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="kRG-GX-qfg"/>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="asqbannerios" translatesAutoresizingMaskIntoConstraints="NO" id="8od-lc-XzA">
+                                <rect key="frame" x="113" y="20" width="370" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="6wh-MW-wNe"/>
+                                </constraints>
+                            </imageView>
                             <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-Cn-A8g">
-                                <rect key="frame" x="0.0" y="108" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimelineCellPhoto" rowHeight="224" id="iSI-vL-pCg" customClass="TimelineCell" customModule="A_Sea_of_Quotes" customModuleProvider="target">
@@ -52,12 +58,13 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="99s-z9-MyP">
                                                     <rect key="frame" x="541" y="174" width="40" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="XL2-tY-UWx"/>
+                                                        <constraint firstAttribute="width" constant="40" id="XL2-tY-UWx"/>
                                                         <constraint firstAttribute="width" constant="40" id="rSG-ra-Ox5"/>
+                                                        <constraint firstAttribute="height" constant="40" id="zoe-ta-my5"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-p4-n2l">
-                                                    <rect key="frame" x="17" y="14" width="566" height="152"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-p4-n2l">
+                                                    <rect key="frame" x="17" y="14" width="566" height="140"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -86,8 +93,10 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6PN-EU-mAh" secondAttribute="trailing" id="1VY-bh-b9s"/>
                             <constraint firstItem="6PN-EU-mAh" firstAttribute="leading" secondItem="kJf-wb-gwd" secondAttribute="leading" id="3yB-Av-QJk"/>
+                            <constraint firstItem="8od-lc-XzA" firstAttribute="centerX" secondItem="6PN-EU-mAh" secondAttribute="centerX" id="6BP-ij-U4R"/>
                             <constraint firstItem="nzl-Cn-A8g" firstAttribute="top" secondItem="0Ss-WK-oG0" secondAttribute="bottom" constant="44" id="AZP-qI-m7b"/>
                             <constraint firstItem="ulW-UK-cMk" firstAttribute="top" secondItem="nzl-Cn-A8g" secondAttribute="bottom" constant="-20" id="CBV-tM-XF0"/>
+                            <constraint firstItem="8od-lc-XzA" firstAttribute="centerY" secondItem="6PN-EU-mAh" secondAttribute="centerY" id="TiF-qf-ieP"/>
                             <constraint firstItem="nzl-Cn-A8g" firstAttribute="top" secondItem="6PN-EU-mAh" secondAttribute="bottom" id="gdz-VT-4Sp"/>
                             <constraint firstItem="ulW-UK-cMk" firstAttribute="top" secondItem="nzl-Cn-A8g" secondAttribute="bottom" constant="-20" id="mnk-UI-3OJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nzl-Cn-A8g" secondAttribute="trailing" constant="-20" id="uOO-Rz-qUi"/>
@@ -111,7 +120,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mUg-5N-Bcg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aov-Vh-Eur" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aov-Vh-Eur" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JVi-Kl-1lG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -206,5 +215,6 @@
     </scenes>
     <resources>
         <image name="Menu" width="50" height="50"/>
+        <image name="asqbannerios" width="500" height="74"/>
     </resources>
 </document>

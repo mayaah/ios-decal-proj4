@@ -36,7 +36,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         menuItem.image = UIImage(named: "Menu")
-        toolbar.tintColor = UIColor.blackColor()
+        // toolbar.tintColor = UIColor.blackColor()
         
         quotes = [Quote]()
         
@@ -51,6 +51,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
 //    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 //        return UITableViewAutomaticDimension
 //    }
+    
     
     func didLoadQuotes(quotes: [Quote]) {
         self.quotes = quotes
