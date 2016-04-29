@@ -31,7 +31,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 100.0;
+        tableView.estimatedRowHeight = 44.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -43,6 +43,14 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         api.loadQuotes(didLoadQuotes, offset: offset)
         
     }
+    
+//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
     
     func didLoadQuotes(quotes: [Quote]) {
         self.quotes = quotes
@@ -57,12 +65,23 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCellPhoto") as! TimelineCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCellPhoto", forIndexPath: indexPath) as! TimelineCell
         
         let quote = quotes[indexPath.row]
             
 //        cell.quoteImageView.image = UIImage(contentsOfFile: quote.photoURL)
+        
+//        var descriptionText = quote.description
+//        var attributedText: NSMutableAttributedString = NSMutableAttributedString(string: descriptionText)
+//        var commaIndex = 0
+//        for i in descriptionText.characters {
+//            while i != "," {
+//                commaIndex += 1
+//            }
+//        }
+//        attributedText.addAttributes([NSFontAttributeName: UIFont.italicSystemFontOfSize(14)], range: NSRange(location: commaIndex, length: descriptionText.characters.count))
         cell.descriptionLabel.text = quote.description
+        cell.descriptionLabel.preferredMaxLayoutWidth = (tableView.bounds.width - 100)
         
         asyncLoadQuoteImage(quote, imageView: cell.quoteImageView)
         cell.bookmarkImageView?.image = UIImage(named: "Bookmark")
