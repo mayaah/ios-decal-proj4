@@ -21,6 +21,8 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
     
     var offset: Int = 0
     
+    var cache = NSCache()
+    
     let api = TumblrAPI()
     
     
@@ -34,6 +36,8 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         tableView.estimatedRowHeight = 44.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        UIApplication.sharedApplication().statusBarHidden = true
         
         menuItem.image = UIImage(named: "Menu")
         // toolbar.tintColor = UIColor.blackColor()
@@ -82,11 +86,35 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
 //        }
 //        attributedText.addAttributes([NSFontAttributeName: UIFont.italicSystemFontOfSize(14)], range: NSRange(location: commaIndex, length: descriptionText.characters.count))
         cell.descriptionLabel.text = quote.description
-        cell.descriptionLabel.preferredMaxLayoutWidth = (tableView.bounds.width - 100)
+        cell.descriptionLabel.preferredMaxLayoutWidth = (tableView.bounds.width - 75)
         
         asyncLoadQuoteImage(quote, imageView: cell.quoteImageView)
+        cell.quoteImageView.userInteractionEnabled = true
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
+        tapRecognizer.numberOfTapsRequired = 2
+        cell.quoteImageView.addGestureRecognizer(tapRecognizer)
+        
+        
         cell.bookmarkImageView?.image = UIImage(named: "Bookmark")
         return cell
+    }
+    
+    func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
+        //tappedImageView will be the image view that was tapped.
+        //dismiss it, animate it off screen, whatever.
+        let tappedImageView = gestureRecognizer.view!
+        var tapLocation = gestureRecognizer.locationInView(self.tableView)
+        
+        var indexPath:NSIndexPath = tableView.indexPathForRowAtPoint(tapLocation)!
+        
+        var postURL = quotes[indexPath.row].postURL
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: postURL)!)
+        
+        
+
+        print("Single Tap on imageview")
+        
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -118,20 +146,27 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         
         let downloadQueue = dispatch_queue_create("com.aseaofquotes.processdownload", nil)
         
-        dispatch_async(downloadQueue) {
+        let image = cache.objectForKey(quote) as? UIImage
+        
+        if image == nil {
+        
+            dispatch_async(downloadQueue) {
             
-            var data = NSData(contentsOfURL: NSURL(string: quote.photoURL)!)
+                var data = NSData(contentsOfURL: NSURL(string: quote.photoURL)!)
             
-            var image : UIImage?
-            if data != nil {
-                quote.photoData = data
-                image = UIImage(data: data!)!
+                var image : UIImage?
+                if data != nil {
+                    quote.photoData = data
+                    image = UIImage(data: data!)!
+                }
+            
+                dispatch_async(dispatch_get_main_queue()) {
+                    imageView.image = image
+                }
+            
             }
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                imageView.image = image
-            }
-            
+        } else {
+            imageView.image = image
         }
     }
     
