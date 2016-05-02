@@ -21,6 +21,7 @@ class NavigationSideController : UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = true
         
         tableView.delegate = self
         tableView.dataSource = self

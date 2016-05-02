@@ -38,6 +38,7 @@ class SearchViewController : UIViewController, UITableViewDelegate, UISearchResu
         super.viewDidLoad()
         definesPresentationContext = true
         configureSearchController()
+        self.navigationController?.navigationBarHidden = true
         
         tableView.delegate = self
         tableView.dataSource = self
