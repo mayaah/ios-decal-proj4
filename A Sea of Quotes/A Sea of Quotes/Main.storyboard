@@ -339,6 +339,7 @@
                                         <color key="tintColor" red="0.50588235290000005" green="0.70196078429999997" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="presentNavigation:" destination="B7F-Iz-JvM" id="wd4-QQ-GNa"/>
+                                            <segue destination="hfb-NI-KXl" kind="presentation" id="1vD-pc-LBs"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TxP-eI-hDD"/>
@@ -435,6 +436,6 @@
         <image name="asqbannerios" width="500" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B4R-Nq-PXY"/>
+        <segue reference="1vD-pc-LBs"/>
     </inferredMetricsTieBreakers>
 </document>

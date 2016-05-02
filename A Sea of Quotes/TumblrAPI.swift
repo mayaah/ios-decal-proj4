@@ -13,8 +13,12 @@ class TumblrAPI {
     let APIKey = "MOz3EosqbGjOZHQFVmSSGwBYGicVvhiJ27Fp7Nha0Rnmf1DDbd"
     
     var quotes = [Quote]()
+    var taggedQuotes = [Quote]()
+
     
     func loadQuotes(completion: (([Quote]) -> Void)!, offset: NSInteger) {
+        
+        print("WHYYYYY")
         
         var URLString = "https://api.tumblr.com/v2/blog/aseaofquotes.tumblr.com/posts/photo?api_key=" + APIKey + "&offset=" + String(offset)
         
@@ -63,9 +67,17 @@ class TumblrAPI {
         task.resume()
     }
     
-    func loadSearch(completion: (([Quote]) -> Void)!, offset: NSInteger, tag: String) {
+    func loadSearch(completion: (([Quote]) -> Void)!, offset: NSInteger, tag: String, newSearch: Bool) {
+        
+        if newSearch {
+            taggedQuotes = [Quote]()
+        }
+        
+        print("LOAD SEARCH")
         
         var URLString = "https://api.tumblr.com/v2/blog/aseaofquotes.tumblr.com/posts/photo?api_key=" + APIKey + "&offset=" + String(offset) + "&tag=" + tag
+        
+        print(URLString)
         
         let session = NSURLSession.sharedSession()
         let quotesURL = NSURL(string: URLString)
@@ -92,14 +104,14 @@ class TumblrAPI {
                     postsDictionary = responseDictionary["posts"] as! [NSDictionary]
                     for quote in postsDictionary {
                         let quote = Quote(data: quote as NSDictionary)
-                        self.quotes.append(quote)
+                        self.taggedQuotes.append(quote)
                         
                     }
                     
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
                     dispatch_async(dispatch_get_global_queue(priority, 0)) {
                         dispatch_async(dispatch_get_main_queue()) {
-                            completion(self.quotes)
+                            completion(self.taggedQuotes)
                         }
                     }
                 } catch let error as NSError {
@@ -108,7 +120,7 @@ class TumblrAPI {
                 
             }
         }
-        
+//        print(taggedQuotes[0].description)
         task.resume()
     }
 }
