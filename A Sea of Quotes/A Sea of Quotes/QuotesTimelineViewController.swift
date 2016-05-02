@@ -10,6 +10,8 @@ import Foundation
 
 import UIKit
 
+import CoreData
+
 class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     var nagivationStyleToPresent : String?
     
@@ -18,6 +20,8 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var toolbar: UIToolbar!
     
     var quotes : [Quote]!
+    
+    var savedQuotes = [NSManagedObject]()
     
     var offset: Int = 0
     
@@ -71,6 +75,7 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCellPhoto", forIndexPath: indexPath) as! TimelineCell
+
         
         let quote = quotes[indexPath.row]
             
@@ -94,8 +99,17 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         tapRecognizer.numberOfTapsRequired = 2
         cell.quoteImageView.addGestureRecognizer(tapRecognizer)
         
-        
-        cell.bookmarkImageView?.image = UIImage(named: "Bookmark")
+        cell.bookmarkImageView.userInteractionEnabled = true
+        if quote.saved == false {
+            let path = NSBundle.mainBundle().pathForResource("Bookmark-64", ofType: "png")
+            cell.bookmarkImageView?.image = UIImage(contentsOfFile: path!)
+        } else {
+            let path = NSBundle.mainBundle().pathForResource("bookmarksave", ofType: "png")
+            cell.bookmarkImageView?.image = UIImage(contentsOfFile: path!)
+        }
+        let bmTapRecognizer = UITapGestureRecognizer(target: self, action: Selector("bookmarkTapped:"))
+        bmTapRecognizer.numberOfTapsRequired = 1
+        cell.bookmarkImageView.addGestureRecognizer(bmTapRecognizer)
         return cell
     }
     
@@ -111,11 +125,49 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         
         UIApplication.sharedApplication().openURL(NSURL(string: postURL)!)
         
-        
-
-        print("Single Tap on imageview")
-        
     }
+    
+    func bookmarkTapped(gestureRecognizer: UITapGestureRecognizer) {
+        print("CLICKED")
+        let tappedBookmark = gestureRecognizer.view!
+        var tapLocation = gestureRecognizer.locationInView(self.tableView)
+        var indexPath:NSIndexPath = tableView.indexPathForRowAtPoint(tapLocation)!
+        let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCellPhoto", forIndexPath: indexPath) as! TimelineCell
+        let quote = quotes[indexPath.row]
+        quote.saved = true
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+
+        let entity =  NSEntityDescription.entityForName("QuoteEntity", inManagedObjectContext:managedContext)
+        
+        let quoteEntity = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        //3
+        var description = quotes[indexPath.row].description
+        var postURL = quotes[indexPath.row].postURL
+        var photoURL = quotes[indexPath.row].photoURL
+        var photoData = quotes[indexPath.row].photoData
+        quoteEntity.setValue(description, forKey: "quoteDescription")
+        quoteEntity.setValue(postURL, forKey: "quotePostURL")
+        quoteEntity.setValue(photoURL, forKey: "quotePhotoURL")
+        quoteEntity.setValue(photoData, forKey: "quoteData")
+        //4
+        do {
+            try managedContext.save()
+            //5
+            savedQuotes.append(quoteEntity)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        print("BEFORE")
+        let path = NSBundle.mainBundle().pathForResource("bookmarksave", ofType: "png")
+        cell.bookmarkImageView?.image = UIImage(contentsOfFile: path!)
+        print("AFTER")
+    }
+    
+    
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row+1 == quotes.count {
@@ -139,6 +191,10 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         let toViewController = segue.destinationViewController as UIViewController!
         self.modalPresentationStyle = UIModalPresentationStyle.Custom
         toViewController.transitioningDelegate = self.transitionOperator
+//        if segue.identifier == "savedSegue" {
+//            let destination = SavedQuotesViewController() // Your destination
+//            self.navigationController?.pushViewController(destination, animated: true)
+//        }
     }
     
     

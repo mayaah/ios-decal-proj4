@@ -16,6 +16,8 @@ class Quote {
     
     var photoData : NSData?
     
+    var saved : Bool = false
+    
     init(data : NSDictionary) {
         
         let desc = getStringFromJSON(data, key: "summary")

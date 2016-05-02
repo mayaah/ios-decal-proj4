@@ -17,6 +17,8 @@ class NavigationSideController : UIViewController, UITableViewDelegate, UITableV
     
     var icons : [String]!
     
+    var pushClosure:(()->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +49,47 @@ class NavigationSideController : UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        dismissViewControllerAnimated(true, completion: nil)
+//        if indexPath.row == 0 {
+//            dismissViewControllerAnimated(true, completion: nil)
+//        } else if indexPath.row == 2 {
+//            print("here yo")
+//            let destination = SavedQuotesViewController() // Your destination
+//            print(QuotesTimelineViewController().navigationController)
+//            QuotesTimelineViewController().navigationController?.pushViewController(destination, animated: true)
+//             performSegueWithIdentifier("SavedQuotesIdentifier", sender: AnyObject!)
+//        }
+        
+//        dismissViewControllerAnimated(true, completion: nil)
+        
+//        if indexPath.row == 2{
+//            QuotesTimelineViewController().performSegueWithIdentifier("savedQuotesSegue", sender: self)
+//        }
+//        let row = indexPath.row
+//        var navScreenIdentifer = ""
+//        if (row == 2) {
+//            navScreenIdentifer = ""
+//        }
+//
+//        let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier(navScreenIdentifer)
+//        self.showViewController(vc as! UIViewController, sender: vc)
+        if indexPath.row == 0 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // make sure to set storyboard id in storyboard for these VC
+            let startingVC =  storyboard.instantiateViewControllerWithIdentifier("QuotesTimelineViewController");
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.navController.viewControllers = [startingVC]
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        if indexPath.row == 2 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // make sure to set storyboard id in storyboard for these VC
+            let startingVC =  storyboard.instantiateViewControllerWithIdentifier("SavedQuotesViewController");
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.navController.viewControllers = [startingVC]
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+
+        
     }
 }
