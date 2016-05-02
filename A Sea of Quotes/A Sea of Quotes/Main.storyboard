@@ -443,66 +443,105 @@
             <point key="canvasLocation" x="2480" y="-589"/>
         </scene>
         <!--Info View Controller-->
-        <scene sceneID="jbK-nP-DXA">
+        <scene sceneID="Kak-ul-kmz">
             <objects>
-                <viewController storyboardIdentifier="InfoViewController" id="YU2-0B-HXS" customClass="InfoViewController" customModule="A_Sea_of_Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="y40-By-Rc2" customClass="InfoViewController" customModule="A_Sea_of_Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gvb-HC-3Xf"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hna-eW-zES"/>
+                        <viewControllerLayoutGuide type="top" id="A2I-jb-Lmc"/>
+                        <viewControllerLayoutGuide type="bottom" id="D7E-Gf-n9E"/>
                     </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFill" id="3rk-ho-Hf0">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFill" id="f8k-X9-mJl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciu-pd-EBq">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-Dj-1rK">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="Menu" width="7" id="aLC-AH-MLv">
+                                    <barButtonItem image="Menu" width="7" id="C8X-kd-kgz">
                                         <color key="tintColor" red="0.50588235290000005" green="0.70196078429999997" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="presentNavigation:" destination="YU2-0B-HXS" id="yzh-g0-umI"/>
-                                            <segue destination="hfb-NI-KXl" kind="presentation" id="3dJ-FF-pc7"/>
+                                            <action selector="presentNavigation:" destination="y40-By-Rc2" id="8Xy-3r-gBY"/>
+                                            <segue destination="hfb-NI-KXl" kind="presentation" id="ff0-Rc-yNn"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vBT-DZ-xnV"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="knq-Ji-iHh"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="asqbannerios" translatesAutoresizingMaskIntoConstraints="NO" id="Njm-Ox-un0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="asqbannerios" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-x8-gj5">
                                 <rect key="frame" x="113" y="20" width="370" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="RUN-GU-20W"/>
+                                    <constraint firstAttribute="width" constant="270" id="UET-Nv-J3I"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="35j-8S-A7v">
+                                <rect key="frame" x="198" y="239" width="160" height="25"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tumblricon.png" translatesAutoresizingMaskIntoConstraints="NO" id="OsF-ye-NCx">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="4v4-cN-vFF"/>
+                                            <constraint firstAttribute="width" constant="25" id="XLd-M7-wKu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fbicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="LdZ-Eb-beT">
+                                        <rect key="frame" x="45" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="1Co-U5-dkd"/>
+                                            <constraint firstAttribute="height" constant="25" id="UJ7-4j-5VR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="twittericon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-SM-VOK">
+                                        <rect key="frame" x="90" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Ahh-fE-v9D"/>
+                                            <constraint firstAttribute="height" constant="25" id="jhP-m8-bsv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pinteresticon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fq3-dm-N28">
+                                        <rect key="frame" x="135" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="P3o-Zu-NOW"/>
+                                            <constraint firstAttribute="height" constant="25" id="wpu-ZW-vwo"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ciu-pd-EBq" firstAttribute="leading" secondItem="3rk-ho-Hf0" secondAttribute="leading" id="1P6-7i-bk9"/>
-                            <constraint firstItem="Njm-Ox-un0" firstAttribute="centerY" secondItem="ciu-pd-EBq" secondAttribute="centerY" id="BBV-ge-sZs"/>
-                            <constraint firstAttribute="trailing" secondItem="ciu-pd-EBq" secondAttribute="trailing" id="SRv-fB-pKz"/>
-                            <constraint firstItem="ciu-pd-EBq" firstAttribute="top" secondItem="gvb-HC-3Xf" secondAttribute="bottom" id="a4P-V5-has"/>
-                            <constraint firstItem="Njm-Ox-un0" firstAttribute="centerX" secondItem="ciu-pd-EBq" secondAttribute="centerX" id="pMu-12-r9R"/>
+                            <constraint firstItem="4Dl-Dj-1rK" firstAttribute="top" secondItem="A2I-jb-Lmc" secondAttribute="bottom" id="0fV-8i-LM2"/>
+                            <constraint firstItem="sYW-x8-gj5" firstAttribute="centerY" secondItem="4Dl-Dj-1rK" secondAttribute="centerY" id="7fY-OK-ksC"/>
+                            <constraint firstItem="35j-8S-A7v" firstAttribute="centerX" secondItem="f8k-X9-mJl" secondAttribute="centerX" id="9Af-iq-4mP"/>
+                            <constraint firstItem="35j-8S-A7v" firstAttribute="centerY" secondItem="f8k-X9-mJl" secondAttribute="centerY" id="Dz9-kS-dx3"/>
+                            <constraint firstItem="sYW-x8-gj5" firstAttribute="centerX" secondItem="4Dl-Dj-1rK" secondAttribute="centerX" id="IRM-O9-Ngb"/>
+                            <constraint firstAttribute="trailing" secondItem="4Dl-Dj-1rK" secondAttribute="trailing" id="R6H-K1-KKo"/>
+                            <constraint firstItem="4Dl-Dj-1rK" firstAttribute="leading" secondItem="f8k-X9-mJl" secondAttribute="leading" id="dxS-6C-L6R"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VF7-km-Xz5">
-                        <barButtonItem key="leftBarButtonItem" id="R2i-CG-m9e"/>
+                    <navigationItem key="navigationItem" id="YbH-yi-YIv">
+                        <barButtonItem key="leftBarButtonItem" id="2Me-bQ-2Xh"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuItem" destination="aLC-AH-MLv" id="lZL-Tt-JzX"/>
-                        <outlet property="toolbar" destination="ciu-pd-EBq" id="3Fm-cd-a8U"/>
+                        <outlet property="menuItem" destination="C8X-kd-kgz" id="PGc-VA-W9s"/>
+                        <outlet property="toolbar" destination="4Dl-Dj-1rK" id="Gwb-1N-xS6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UeH-C2-onh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8j-bC-nxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3219" y="200"/>
+            <point key="canvasLocation" x="3245" y="200"/>
         </scene>
     </scenes>
     <resources>
         <image name="Menu" width="50" height="50"/>
         <image name="asqbannerios" width="500" height="74"/>
+        <image name="fbicon.png" width="50" height="50"/>
+        <image name="pinteresticon.png" width="50" height="50"/>
         <image name="savedquotes.png" width="500" height="74"/>
         <image name="searchquotes.png" width="500" height="74"/>
+        <image name="tumblricon.png" width="50" height="50"/>
+        <image name="twittericon.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3dJ-FF-pc7"/>
+        <segue reference="ff0-Rc-yNn"/>
     </inferredMetricsTieBreakers>
 </document>
