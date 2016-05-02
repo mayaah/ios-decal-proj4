@@ -27,6 +27,9 @@
 		629682071CD6DBEA00336758 /* bookmarksave.png in Resources */ = {isa = PBXBuildFile; fileRef = 629682051CD6DBEA00336758 /* bookmarksave.png */; };
 		629682081CD6DBEA00336758 /* Bookmark-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 629682061CD6DBEA00336758 /* Bookmark-64.png */; };
 		6296820A1CD6ED7B00336758 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629682091CD6ED7B00336758 /* SearchViewController.swift */; };
+		629682101CD71B3600336758 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296820F1CD71B3600336758 /* InfoViewController.swift */; };
+		629682121CD71E3900336758 /* searchquotes.png in Resources */ = {isa = PBXBuildFile; fileRef = 629682111CD71E3900336758 /* searchquotes.png */; };
+		629682141CD71E4500336758 /* savedquotes.png in Resources */ = {isa = PBXBuildFile; fileRef = 629682131CD71E4500336758 /* savedquotes.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		629682051CD6DBEA00336758 /* bookmarksave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmarksave.png; path = "A Sea of Quotes/bookmarksave.png"; sourceTree = "<group>"; };
 		629682061CD6DBEA00336758 /* Bookmark-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bookmark-64.png"; path = "A Sea of Quotes/Bookmark-64.png"; sourceTree = "<group>"; };
 		629682091CD6ED7B00336758 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6296820F1CD71B3600336758 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		629682111CD71E3900336758 /* searchquotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchquotes.png; sourceTree = "<group>"; };
+		629682131CD71E4500336758 /* savedquotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savedquotes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,8 @@
 				629681FC1CD345B000336758 /* asqbannerios */,
 				629682051CD6DBEA00336758 /* bookmarksave.png */,
 				629682061CD6DBEA00336758 /* Bookmark-64.png */,
+				629682111CD71E3900336758 /* searchquotes.png */,
+				629682131CD71E4500336758 /* savedquotes.png */,
 				626D6FA01CCD9F76005E771F /* A Sea of Quotes */,
 				626D6FB51CCD9F76005E771F /* A Sea of QuotesTests */,
 				626D6FC01CCD9F76005E771F /* A Sea of QuotesUITests */,
@@ -175,6 +183,7 @@
 				626D6FDE1CD1D61A005E771F /* NavigationSideController.swift */,
 				629681FE1CD4188000336758 /* SavedQuotesViewController.swift */,
 				629682091CD6ED7B00336758 /* SearchViewController.swift */,
+				6296820F1CD71B3600336758 /* InfoViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -298,8 +307,10 @@
 				626D6FAC1CCD9F76005E771F /* LaunchScreen.storyboard in Resources */,
 				626D6FA91CCD9F76005E771F /* Assets.xcassets in Resources */,
 				629682071CD6DBEA00336758 /* bookmarksave.png in Resources */,
+				629682121CD71E3900336758 /* searchquotes.png in Resources */,
 				629681FD1CD345B000336758 /* asqbannerios in Resources */,
 				629682011CD425C900336758 /* Main.storyboard in Resources */,
+				629682141CD71E4500336758 /* savedquotes.png in Resources */,
 				629682081CD6DBEA00336758 /* Bookmark-64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +345,7 @@
 				6296820A1CD6ED7B00336758 /* SearchViewController.swift in Sources */,
 				626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */,
 				626D6FE11CD1D675005E771F /* NavigationSideCell.swift in Sources */,
+				629682101CD71B3600336758 /* InfoViewController.swift in Sources */,
 				626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */,
 				629682041CD6C9F300336758 /* Model.xcdatamodeld in Sources */,
 				626D6FD61CCEB177005E771F /* QuotesTimelineViewController.swift in Sources */,

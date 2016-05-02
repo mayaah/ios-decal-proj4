@@ -91,13 +91,34 @@ class SavedQuotesViewController : UIViewController, UITableViewDelegate, UITable
 //        tapRecognizer.numberOfTapsRequired = 2
 //        cell.quoteImageView.addGestureRecognizer(tapRecognizer)
         
-        
+        cell.bookmarkImageView.userInteractionEnabled = true
         cell.bookmarkImageView?.image = UIImage(named: "bookmarksave")
-//        let bmTapRecognizer = UITapGestureRecognizer(target: self, action: Selector("bookmarkTapped:"))
-//        bmTapRecognizer.numberOfTapsRequired = 1
-//        cell.bookmarkImageView.addGestureRecognizer(bmTapRecognizer)
+        let bmTapRecognizer = UITapGestureRecognizer(target: self, action: Selector("bookmarkTapped:"))
+        bmTapRecognizer.numberOfTapsRequired = 1
+        cell.bookmarkImageView.addGestureRecognizer(bmTapRecognizer)
         return cell
     }
+    
+    func bookmarkTapped(gestureRecognizer: UITapGestureRecognizer) {
+        print("CLICKED")
+        let tappedBookmark = gestureRecognizer.view!
+        var tapLocation = gestureRecognizer.locationInView(self.tableView)
+        var indexPath:NSIndexPath = tableView.indexPathForRowAtPoint(tapLocation)!
+        let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCellPhoto", forIndexPath: indexPath) as! TimelineCell
+        let quote = savedQuotes[indexPath.row]
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let moc = appDelegate.managedObjectContext
+        
+        // 3
+        moc.deleteObject(savedQuotes[indexPath.row])
+        appDelegate.saveContext()
+        
+        // 4
+        savedQuotes.removeAtIndex(indexPath.row)
+        tableView.reloadData()
+    }
+
     
     func asyncLoadQuoteImage(photoData: NSData, imageView: UIImageView) {
         
