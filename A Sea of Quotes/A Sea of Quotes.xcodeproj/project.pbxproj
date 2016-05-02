@@ -26,6 +26,7 @@
 		629682041CD6C9F300336758 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 629682021CD6C9F200336758 /* Model.xcdatamodeld */; };
 		629682071CD6DBEA00336758 /* bookmarksave.png in Resources */ = {isa = PBXBuildFile; fileRef = 629682051CD6DBEA00336758 /* bookmarksave.png */; };
 		629682081CD6DBEA00336758 /* Bookmark-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 629682061CD6DBEA00336758 /* Bookmark-64.png */; };
+		6296820A1CD6ED7B00336758 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629682091CD6ED7B00336758 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		629682031CD6C9F200336758 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		629682051CD6DBEA00336758 /* bookmarksave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmarksave.png; path = "A Sea of Quotes/bookmarksave.png"; sourceTree = "<group>"; };
 		629682061CD6DBEA00336758 /* Bookmark-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bookmark-64.png"; path = "A Sea of Quotes/Bookmark-64.png"; sourceTree = "<group>"; };
+		629682091CD6ED7B00336758 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				626D6FD71CCEF63F005E771F /* TransitionOperator.swift */,
 				626D6FDE1CD1D61A005E771F /* NavigationSideController.swift */,
 				629681FE1CD4188000336758 /* SavedQuotesViewController.swift */,
+				629682091CD6ED7B00336758 /* SearchViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				629681FF1CD4188000336758 /* SavedQuotesViewController.swift in Sources */,
 				626D6FD31CCDAD62005E771F /* Quote.swift in Sources */,
 				626D6FA41CCD9F76005E771F /* ViewController.swift in Sources */,
+				6296820A1CD6ED7B00336758 /* SearchViewController.swift in Sources */,
 				626D6FA21CCD9F76005E771F /* AppDelegate.swift in Sources */,
 				626D6FE11CD1D675005E771F /* NavigationSideCell.swift in Sources */,
 				626D6FD01CCDA14A005E771F /* TumblrAPI.swift in Sources */,

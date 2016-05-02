@@ -100,13 +100,8 @@ class QuotesTimelineViewController : UIViewController, UITableViewDelegate, UITa
         cell.quoteImageView.addGestureRecognizer(tapRecognizer)
         
         cell.bookmarkImageView.userInteractionEnabled = true
-        if quote.saved == false {
-            let path = NSBundle.mainBundle().pathForResource("Bookmark-64", ofType: "png")
-            cell.bookmarkImageView?.image = UIImage(contentsOfFile: path!)
-        } else {
-            let path = NSBundle.mainBundle().pathForResource("bookmarksave", ofType: "png")
-            cell.bookmarkImageView?.image = UIImage(contentsOfFile: path!)
-        }
+        let path = NSBundle.mainBundle().pathForResource("Bookmark-64", ofType: "png")
+        cell.bookmarkImageView?.image = UIImage(contentsOfFile: path!)
         let bmTapRecognizer = UITapGestureRecognizer(target: self, action: Selector("bookmarkTapped:"))
         bmTapRecognizer.numberOfTapsRequired = 1
         cell.bookmarkImageView.addGestureRecognizer(bmTapRecognizer)

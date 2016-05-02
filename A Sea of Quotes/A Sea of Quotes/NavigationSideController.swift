@@ -80,6 +80,14 @@ class NavigationSideController : UIViewController, UITableViewDelegate, UITableV
             appDelegate.navController.viewControllers = [startingVC]
             dismissViewControllerAnimated(true, completion: nil)
         }
+        if indexPath.row == 1 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // make sure to set storyboard id in storyboard for these VC
+            let startingVC =  storyboard.instantiateViewControllerWithIdentifier("SearchViewController");
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.navController.viewControllers = [startingVC]
+            dismissViewControllerAnimated(true, completion: nil)
+        }
         if indexPath.row == 2 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             // make sure to set storyboard id in storyboard for these VC
